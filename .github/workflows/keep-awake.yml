@@ -2,7 +2,7 @@ name: Keep Streamlit Awake
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: 0 */6 * * *
   workflow_dispatch:
 
 jobs:
@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Streamlit app
-        run: curl -sL https://trafficintelligence.streamlit.app/ -o /dev/null -w "%{http_code}\n"
+        run: curl -sL https://trafficintelligence.streamlit.app/
